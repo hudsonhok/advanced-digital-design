@@ -1,0 +1,58 @@
+QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+Start time: 16:52:48 on Dec 02,2022
+vlog -pedanticerrors -lint -hazards -source -stats=all alu.sv control.sv cpu.sv decoder.sv hexdriver.sv regfile.sv simtop.sv top.sv 
+-- Compiling module alu
+-- Compiling module control
+-- Compiling module cpu
+###### cpu.sv(101):                 .regwrite(regwrite_EX),
+** Warning: cpu.sv(101): (vlog-2623) Undefined variable: regwrite_EX.
+-- Compiling module decoder
+-- Compiling module hexdriver
+-- Compiling module regfile
+-- Compiling module simtop
+-- Compiling module top
+
+Top level modules:
+	simtop
+
+Memory Statistics
+       mem: size of process (VSZ)                                          182.59 Mb
+       mem: active during the process (RSS)                                 28.98 Mb
+Total Time
+     total: wall time                                                        0.23 s
+     total: cpu time                                                         0.05 s
+
+End time: 16:52:48 on Dec 02,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 1
+Reading pref.tcl
+
+# 2020.1
+
+# vsim -pedanticerrors -hazards -c -sva -immedassert work.simtop -do "/dev/stdin" 
+# Start time: 16:52:49 on Dec 02,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+###### cpu.sv(101):                 .regwrite(regwrite_EX),
+# ** Warning: cpu.sv(101): (vopt-2623) Undefined variable: regwrite_EX.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2020.1 linux_x86_64 Jan 28 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.simtop(fast)
+# do /dev/stdin
+#          1 tests completed with          0 errors
+# ** Note: $finish    : simtop.sv(77)
+#    Time: 20 ns  Iteration: 1  Instance: /simtop
+# End time: 16:52:50 on Dec 02,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
